@@ -44,7 +44,7 @@ public class CountPalindromes implements AM
         }
         int numberWorkers = Integer.parseInt(args[0]);
         task curtask = new task();
-        curtask.addJarFile("Palindrom.jar");
+        curtask.addJarFile("CountPalindromes.jar");
         AMInfo info = new AMInfo(curtask, null);
         System.err.println("Reading input...");
         String S = "";
