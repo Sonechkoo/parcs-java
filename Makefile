@@ -3,7 +3,7 @@ all: run
 clean:
 	rm -f out/CountPalindromes.jar
 
-out/Hash.jar: out/parcs.jar src/CountPalindromes.java
+out/CountPalindromes.jar: out/parcs.jar src/CountPalindromes.java
 	@mkdir -p temp
 	@javac -cp out/parcs.jar -d temp src/CountPalindromes.java
 	@jar cf out/CountPalindromes.jar -C temp .
