@@ -50,8 +50,8 @@ public class CountPalindromes implements AM
         String S = "";
         try
         {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            S = br.nextLine();
+            Scanner sc = new Scanner(new File(info.curtask.findFile("example.txt")));
+            S = sc.nextLine();
         }
         catch (IOException e) {e.printStackTrace(); return;}
         int len = S.length();
