@@ -72,7 +72,7 @@ public class CountPalindromes implements AM
         int[] results = new int[numberWorkers];
         for (int i = 0; i < numberWorkers; i++)
         {
-            results[i] = (BigInteger) channels[i].readObject();
+            results[i] = (int) channels[i].readObject();
         }
         System.err.println("Calculation of the result");
         int res = 0;
