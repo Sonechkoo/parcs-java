@@ -14,7 +14,7 @@ public class CountPalindromes implements AM
     {
         int pos_f = 0;
         int pos_s = 0;
-        for (int j=0; j<s.size(); j+=1)
+        for (int j=0; j<s.length(); j+=1)
             {
                 if (s.charAt(j) == ' ' && pos_f == 0)
                 {
@@ -27,7 +27,8 @@ public class CountPalindromes implements AM
             }
         int start = Integer.valueOf(s.substring(0, pos_f-1));
         int step = Integer.valueOf(s.substring(pos_f+1, pos_s-1));
-        s = s.substring(pos_s+1, s.size()-1);
+        s = s.substring(pos_s+1, s.length()-1);
+        System.err.println("Calculating for .. "+start+" "+step+" "+s);
         int n = s.length();
         int res = 0;
         int l = start;
