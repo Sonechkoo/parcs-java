@@ -28,7 +28,7 @@ public class CountPalindromes implements AM
         int start = Integer.valueOf(s.substring(0, pos_f));
         int step = Integer.valueOf(s.substring(pos_f+1, pos_s));
         s = s.substring(pos_s+1, s.length());
-        System.err.println("Calculating for .. "+start+" "+step+" "+s);
+        System.err.println("Calculating (in function) for .. "+start+" "+step+" "+s);
         int n = s.length();
         int res = 0;
         int l = start;
@@ -48,7 +48,7 @@ public class CountPalindromes implements AM
             }
             l += step;
         }
-        System.err.println("Result is " + res);
+        System.err.println("Result (in function) is " + res);
         return res;
     }
 
