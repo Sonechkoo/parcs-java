@@ -17,6 +17,7 @@ java -jar TCPHostsServer.jar</code>
 <b>App</b>
 
 <code>sudo apt-get update && sudo apt-get install -y openjdk-17-jdk git make
+rm -rf parcs-java
 git clone https://github.com/Sonechkoo/parcs-java
 cd parcs-java
 echo 10.128.0.10 > out/server
