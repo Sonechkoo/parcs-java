@@ -16,11 +16,11 @@ public class CountPalindromes implements AM
         int pos_s = 0;
         for (int j=0; j<s.size(); j+=1)
             {
-                if (s[j] == ' ' && pos_f == 0)
+                if (s.charAt(j) == ' ' && pos_f == 0)
                 {
                     pos_f = j;
                 } else 
-                if (s[j] == ' ')
+                if (s.charAt(j) == ' ')
                 {
                     pos_s = j;
                 }
