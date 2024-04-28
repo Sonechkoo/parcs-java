@@ -19,5 +19,5 @@ java -jar TCPHostsServer.jar</code>
 <code>sudo apt-get update && sudo apt-get install -y openjdk-17-jdk git make
 git clone https://github.com/Sonechkoo/parcs-java
 cd parcs-java
-echo $hosts_server_internal_ip (10.128.0.10) > out/server
-make run $WORKERS</code>
+echo 10.128.0.10 > out/server
+make run WORKERS = 2 </code>
