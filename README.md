@@ -8,9 +8,10 @@ java -jar Daemon.jar</code>
 
 <code>sudo apt-get update && sudo apt-get install -y openjdk-17-jdk
 wget https://github.com/lionell/labs/raw/master/parcs/HostsServer/TCPHostsServer.jar
+rm hosts.list
 touch hosts.list
-echo $daemon_1_internal_ip (10.128.0.14) >> hosts.list
-echo $daemon_2_internal_ip (10.128.0.13) >> hosts.list
+echo 10.128.0.14 >> hosts.list
+echo 10.128.0.13 >> hosts.list
 java -jar TCPHostsServer.jar</code>
 
 <b>App</b>
