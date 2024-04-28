@@ -10,8 +10,24 @@ public class CountPalindromes implements AM
 {
     private static long startTime = 0;
 
-    public static int countPalindromes(int start, int step, String s)
+    public static int countPalindromes(String s)
     {
+        int pos_f = 0;
+        int pos_s = 0;
+        for (int j=0; j<s.size(); j+=1)
+            {
+                if (s[j] == ' ' && pos_f == 0)
+                {
+                    pos_f = j;
+                } else 
+                if (s[j] == ' ')
+                {
+                    pos_s = j;
+                }
+            }
+        int start = Integer.valueOf(s.substring(0, pos_f-1));
+        int step = Integer.valueOf(s.substring(pos_f+1, pos_s-1));
+        s = s.substring(pos_s+1, s.size()-1);
         int n = s.length();
         int res = 0;
         int l = start;
@@ -65,7 +81,8 @@ public class CountPalindromes implements AM
             p.execute("CountPalindromes");
             // c.write(i);
             // c.write(numberWorkers);
-            c.write(S);
+            String s = Integer.toString(i)+" "+Integer.toString(numberWorkers)+" "+S;
+            c.write(s);
             channels[i] = c;
         }
         System.err.println("Getting results");
@@ -94,7 +111,7 @@ public class CountPalindromes implements AM
         //int step = (int)info.parent.readObject();
         String s = (String)info.parent.readObject();
         System.err.println("Started run with " + s + " string");
-        int subresult = countPalindromes(0, 2, s);
+        int subresult = countPalindromes(s);
         info.parent.write(subresult);
     }
 }
