@@ -25,9 +25,9 @@ public class CountPalindromes implements AM
                     pos_s = j;
                 }
             }
-        int start = Integer.valueOf(s.substring(0, pos_f-1));
-        int step = Integer.valueOf(s.substring(pos_f+1, pos_s-1));
-        s = s.substring(pos_s+1, s.length()-1);
+        int start = Integer.valueOf(s.substring(0, pos_f));
+        int step = Integer.valueOf(s.substring(pos_f+1, pos_s));
+        s = s.substring(pos_s+1, s.length());
         System.err.println("Calculating for .. "+start+" "+step+" "+s);
         int n = s.length();
         int res = 0;
