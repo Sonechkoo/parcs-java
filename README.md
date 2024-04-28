@@ -16,7 +16,7 @@ java -jar TCPHostsServer.jar</code>
 <b>App</b>
 
 <code>sudo apt-get update && sudo apt-get install -y openjdk-17-jdk git make
-git clone https://github.com/VladProg/parcs-java-sort.git
+git clone https://github.com/Sonechkoo/parcs-java
 cd parcs-java-sort
 echo $hosts_server_internal_ip > out/server
 make run $WORKERS</code>
