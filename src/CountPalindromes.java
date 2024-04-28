@@ -63,8 +63,8 @@ public class CountPalindromes implements AM
             point p = info.createPoint();
             channel c = p.createChannel();
             p.execute("CountPalindromes");
-            c.write(i);
-            c.write(numberWorkers);
+            // c.write(i);
+            // c.write(numberWorkers);
             c.write(S);
             channels[i] = c;
         }
@@ -90,10 +90,10 @@ public class CountPalindromes implements AM
 
     public void run(AMInfo info)
     {
-        int start_pos = (int)info.parent.readObject();
-        int step = (int)info.parent.readObject();
+        //int start_pos = (int)info.parent.readObject();
+        //int step = (int)info.parent.readObject();
         String s = (String)info.parent.readObject();
-        int subresult = countPalindromes(start_pos, step, s);
+        int subresult = countPalindromes(0, 2, s);
         info.parent.write(subresult);
     }
 }
