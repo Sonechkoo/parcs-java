@@ -68,7 +68,7 @@ public class CountPalindromes implements AM
         String S = "";
         try
         {
-            Scanner sc = new Scanner(new File(info.curtask.findFile("example_10000.txt")));
+            Scanner sc = new Scanner(new File(info.curtask.findFile("example_20000.txt")));
             S = sc.nextLine();
         }
         catch (IOException e) {e.printStackTrace(); return;}
