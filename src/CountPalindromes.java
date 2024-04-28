@@ -48,6 +48,7 @@ public class CountPalindromes implements AM
             }
             l += step;
         }
+        System.err.println("Result is " + res);
         return res;
     }
 
