@@ -21,4 +21,4 @@ rm -rf parcs-java
 git clone https://github.com/Sonechkoo/parcs-java
 cd parcs-java
 echo 10.128.0.10 > out/server
-make run WORKERS = 2 </code>
+make run WORKERS=2 </code>
