@@ -114,7 +114,7 @@ public class CountPalindromes implements AM
         String s = (String)info.parent.readObject();
         System.err.println("Started run with " + s + " string");
         int subresult = countPalindromes(s);
-        System.err.println("Result is "+subresult);
+        System.err.println("Result in run is " + subresult);
         info.parent.write(subresult);
     }
 }
