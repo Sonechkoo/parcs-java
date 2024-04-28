@@ -93,6 +93,7 @@ public class CountPalindromes implements AM
         //int start_pos = (int)info.parent.readObject();
         //int step = (int)info.parent.readObject();
         String s = (String)info.parent.readObject();
+        System.err.println("Started run with " + s + " string");
         int subresult = countPalindromes(0, 2, s);
         info.parent.write(subresult);
     }
